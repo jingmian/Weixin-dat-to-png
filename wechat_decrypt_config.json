@@ -1,0 +1,6 @@
+{  
+  "version": 4,  
+  "img_key": "eccbc87e4b5ce2fe28308fd9f2a7baf3",   
+  "xor_key": "0x37",  
+  "data_dir": "./msg"  
+}
