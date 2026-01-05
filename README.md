@@ -65,7 +65,7 @@ task_payload = {
 python3 decrypt.py
 ```
 
-解密后的图片保存在 `decrypted_images/` 目录，文件名为 `{md5}.{ext}`。
+解密后的图片保存在 `decrypted_images/` 目录，文件名为 `{md5}.{png}`。
 
 
 
