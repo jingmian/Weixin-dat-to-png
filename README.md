@@ -68,26 +68,4 @@ python3 decrypt.py
 解密后的图片保存在 `decrypted_images/` 目录，文件名为 `{md5}.{ext}`。
 
 
-批量解密脚本示例：
 
-```python
-import requests
-import json
-
-# 获取聊天记录
-response = requests.get("http://localhost:8080/api/v1/chatlog?time=2025-02-27~2025-02-27&talker=3231237@chatroom&limit=100&format=json")
-data = response.json()
-
-# 过滤图片消息
-images = [msg for msg in data['messages'] if msg.get('type') == 3]
-
-# 批量解密
-for img in images:
-    task_payload = {
-        "contents": {
-            "md5": img['md5'],
-            "path": img['path']
-        }
-    }
-    decryptor.process_task(task_payload, config['data_dir'])
-```
